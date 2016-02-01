@@ -74,6 +74,9 @@ footer .section-two p{opacity: 0.6}
 footer h4{
     color: #fff;
 text-transform: uppercase}
+footer .social-links{
+    padding-top: 20px;
+}
 
 /*************************CAROUSEL BEGIN*********************************************/
 /* CUSTOMIZE THE NAVBAR
@@ -81,11 +84,11 @@ text-transform: uppercase}
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 20;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*left: 0;*/
+    /*z-index: 20;*/
     padding-top: 0px;
     border-top: 4px solid #0EA474;
 }
@@ -99,7 +102,7 @@ text-transform: uppercase}
     padding-right: 15px;
     padding-left: 15px;
     background-color: #3c3c3c;
-    height: 70px;
+    height: 50px;
 }
 .navbar-wrapper .navbar .container {
     width: auto;
@@ -111,6 +114,13 @@ text-transform: uppercase}
 .navbar-inverse{
     background: none;
     border: none;
+}
+.navbar li{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.logo{
+    height: 140%;
 }
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -178,6 +188,7 @@ text-transform: uppercase}
     /* Navbar positioning foo */
     .navbar-wrapper {
         margin-top: 0px;
+        background: url("../img/nav-bg.png") repeat-x;
     }
     .navbar-wrapper .container {
         padding-right: 15px;
@@ -186,11 +197,46 @@ text-transform: uppercase}
     .navbar-wrapper .navbar {
         padding-right: 0;
         padding-left: 0;
+        background: none;
     }
-
+    .navbar .logo{
+        height: 250%;
+    }
     /* The navbar becomes detached from the top, so we round the corners */
     .navbar-wrapper .navbar {
         border-radius: 4px;
+    }
+
+
+    /*navbar scroll effects*/
+    .navbar-scroll{
+     background: #C7C7CB;
+        border: none;
+    }
+    .navbar-nav > li > a {
+        padding: 10px 25px;
+
+    }
+    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus  {
+        background: none;
+        /*color: #0EA474;*/
+    }
+
+    .navbar-scroll .navbar-nav > li > a {
+        padding: 25px 25px;
+        color: #333;
+    }
+    .navbar-scroll .logo{
+        height: 180%;
+    }
+
+
+    .navbar, .navbar-scroll, .navbar img, .navbar-nav, .navbar-nav > li > a, .navbar-scroll .logo  {
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
     }
 
     /* Bump up size of carousel content */
@@ -210,6 +256,7 @@ text-transform: uppercase}
         margin-top: 120px;
     }
 }
+
 /******************CAROUSEL END***********************************/
 
 
@@ -343,4 +390,3 @@ input[type=range]:focus::-ms-fill-upper {
     font-size: 18px;
     min-height: 70px;
 }
-
